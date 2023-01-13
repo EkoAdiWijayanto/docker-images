@@ -8,7 +8,8 @@ COPY .nvmrc /code/.nvmrc
 RUN /bin/bash -l -c "nvm install;" \
     "nvm use;"
     
-RUN /bin/bash -l -c "npm install -g --unsafe-perm cross-env babel-cli"
+RUN /bin/bash -l -c "npm install -g --unsafe-perm babel-cli;"
+RUN /bin/bash -l -c "npm install -g cross-env;"
 
 RUN apt-get clean
 RUN apt-get autoclean
